@@ -19,7 +19,7 @@ class Die(object):
         return random.choice(self.possibleVals)
 
 # Implement this -- Coding Part 1 of 2
-def makeHistogram(values, numBins, xLabel, yLabel, title=None):
+def make_histogram(values, numBins, xLabel, yLabel, title=None):
     """
       - values, a sequence of numbers
       - numBins, a positive int
@@ -64,7 +64,7 @@ def getAverage(die, numRolls, numTrials):
       - numRolls, numTrials, are positive ints
       - Calculates the expected mean value of the longest run of a number
         over numTrials runs of numRolls rolls.
-      - Calls makeHistogram to produce a histogram of the longest runs for all
+      - Calls make_histogram to produce a histogram of the longest runs for all
         the trials. There should be 10 bins in the histogram
       - Choose appropriate labels for the x and y axes.
       - Returns the mean calculated
@@ -81,7 +81,7 @@ def getAverage(die, numRolls, numTrials):
         longestRuns.append(findLongestRun(rollsResult))
 
     # Plot histogram
-    makeHistogram(longestRuns,10,"Means of the Longest Run","Number of Trials", "Distribution of the longest Runs")
+    make_histogram(longestRuns,10,"Means of the Longest Run","Number of Trials", "Distribution of the longest Runs")
 
     return sum(longestRuns)/float(len(longestRuns))
 
